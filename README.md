@@ -13,9 +13,9 @@ This project extends the original [VirtualECU](https://github.com/pschichtel/Vir
 
 ## Project Objectives
 The goal is to develop a firewall framework that:
-*Controls communication between critical ECUs in a vehicle, such as the ABS, ECM, ADAS, and more.
-*Protects against potential cybersecurity threats by implementing custom firewall rules for specific ECUs.
-*Allows for scalable and flexible testing of automotive firewalls in a virtual environment.
+* Controls communication between critical ECUs in a vehicle, such as the ABS, ECM, ADAS, and more.
+* Protects against potential cybersecurity threats by implementing custom firewall rules for specific ECUs.
+* Allows for scalable and flexible testing of automotive firewalls in a virtual environment.
 
 ## Methodology
 1. System Design
