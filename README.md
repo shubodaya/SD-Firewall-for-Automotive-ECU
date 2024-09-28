@@ -11,6 +11,12 @@ This project extends the original [VirtualECU](https://github.com/pschichtel/Vir
 - Logging and Monitoring: Captures detailed logs for analysis, ensuring the firewall operates as expected.
 - Attack Simulations: Test the firewall under various cybersecurity threat scenarios to ensure robustness and resilience.
 
+### Scenario 1
+![Scenario1](https://github.com/user-attachments/assets/75a372a4-0e11-4bf3-b3ed-21e17a8892f6)
+
+### Scenario 2
+![Scenario2](https://github.com/user-attachments/assets/70baffeb-ad04-43ed-9873-400a1cc515be)
+
 ## Project Objectives
 The goal is to develop a firewall framework that:
 * Controls communication between critical ECUs in a vehicle, such as the ABS, ECM, ADAS, and more.
@@ -49,7 +55,9 @@ sudo apt install git -y
 ```
 git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
 cd SD-Firewall-for-Automotive-Network
-cd 
+cd Scenario1-Shared-vCAN
+# or second scenario
+cd Scenario2-Dedicated-vCAN
 ```
 2. Install the required packages:
 ```
