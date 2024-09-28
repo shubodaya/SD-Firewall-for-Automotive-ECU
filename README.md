@@ -88,7 +88,7 @@ For the second scenario
 ```
 cd Scenario2-Dedicated-vCAN
 ```
-> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 in separate sessions to avoid conflicts between shared and dedicated vCAN interfaces.
+> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
 
 2. Install the required packages:
 ```
@@ -150,7 +150,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan4 bcm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan5 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan6 adas.yaml"
 ```
-> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 in separate sessions to avoid conflicts between shared and dedicated vCAN interfaces.
+> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
 
 9. Run the firewall script:
 Again, open a separate terminal tab to run the firewall:
