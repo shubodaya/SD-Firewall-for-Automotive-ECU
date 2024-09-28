@@ -5,11 +5,11 @@ A comprehensive framework for implementing Software-Defined Firewalls (SDF) in a
 This project extends the original [VirtualECU](https://github.com/pschichtel/VirtualECU) repository to focus on the implementation and validation of a Software-Defined Firewall (SDF) specifically designed for securing communication between automotive ECUs. The SD-Firewall protects against unauthorized access, malicious communication, and cybersecurity threats in a virtual automotive network using customized firewall rules. The project runs on a Linux-based virtual environment using Scala, SBT, SocketCAN, and CAN-utils, simulating a robust automotive communication system.
 
 ## Key Features:
--Virtual ECU Simulation: Provides a virtual environment for testing firewall rules and ECU interactions without requiring physical hardware.
--Python-Based Firewall: Controls and manages the flow of data between virtual ECUs, enforcing allow/block rules based on security requirements.
--Virtual CAN Networks (vCAN): Simulates the in-vehicle communication system for ECUs, allowing for realistic testing.
--Logging and Monitoring: Captures detailed logs for analysis, ensuring the firewall operates as expected.
--Attack Simulations: Test the firewall under various cybersecurity threat scenarios to ensure robustness and resilience.
+- Virtual ECU Simulation: Provides a virtual environment for testing firewall rules and ECU interactions without requiring physical hardware.
+- Python-Based Firewall: Controls and manages the flow of data between virtual ECUs, enforcing allow/block rules based on security requirements.
+- Virtual CAN Networks (vCAN): Simulates the in-vehicle communication system for ECUs, allowing for realistic testing.
+- Logging and Monitoring: Captures detailed logs for analysis, ensuring the firewall operates as expected.
+- Attack Simulations: Test the firewall under various cybersecurity threat scenarios to ensure robustness and resilience.
 
 ## Project Objectives
 The goal is to develop a firewall framework that:
