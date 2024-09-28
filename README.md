@@ -89,7 +89,7 @@ For the second scenario
 ```
 cd Scenario2-Dedicated-vCAN
 ```
-> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
+> **_Note:_** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
 
 2. Install the required packages:
 ```
@@ -140,7 +140,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan0 ecm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 tcm.yaml"
 ```
-* Scenario 2
+* Scenario 2: 
 Again, open separate terminal tabs for each ECU and run the following commands:
 ```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
