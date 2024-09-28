@@ -105,6 +105,19 @@ sudo ip link add dev vcan7 type vcan | sudo ip link set up vcan7
 sbt clean
 sbt update
 sbt compile
+```
+### Scenario 1
+```
+sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan1 acm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan2 adas.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan1 bcm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan0 ecm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan1 icu.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan0 tcm.yaml"
+```
+### Scenario 2
+```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 ecm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan2 tcm.yaml"
