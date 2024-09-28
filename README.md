@@ -32,6 +32,8 @@ The goal is to develop a firewall framework that:
 * Protects against potential cybersecurity threats by implementing custom firewall rules for specific ECUs.
 * Allows for scalable and flexible testing of automotive firewalls in a virtual environment.
 
+
+
 ## Methodology
 1. System Design
 The project begins by identifying key automotive ECUs (ABS, ACM, BCM, ECM, ICU, TCM, and ADAS) that require specific firewall rules to secure communication. The firewall is designed to manage the data flow between these virtual ECUs and mitigate cybersecurity threats.
@@ -47,6 +49,21 @@ To validate the effectiveness of the firewall, traffic between the ECUs is simul
 
 5. Log Analysis
 Event logs from vCAN networks are collected and analyzed to assess the firewall's performance. Any anomalies detected are used to refine the firewall rules.
+
+## Components
+Virtual ECUs
+This project simulates the following ECUs:
+* Anti-lock Brake System (ABS)
+* Airbag Control Module (ACM)
+* Body Control Module (BCM)
+* Engine Control Module (ECM)
+* Infotainment Control Unit (ICU)
+* Transmission Control Module (TCM)
+* Advanced Driver Assistance Systems (ADAS)
+Each ECU represents key vehicle functions and security requirements, ensuring that the firewall is tailored for realistic and complex automotive scenarios.
+
+## Virtual CAN (vCAN) Network
+Virtual CAN networks (vCAN) are used to simulate data communication between the ECUs. These virtual networks allow real-time monitoring and testing of ECU traffic, enabling effective testing of the firewall rules.
 
 ## Installation
 Prerequisites
@@ -151,22 +168,6 @@ cansend vcan6 7E4#02011000
 * Customize the firewall rules in the firewall_dict.py file to meet your specific requirements.
 * Simulate traffic between the virtual ECUs and monitor the log files for communication details and firewall performance.
 * Use CAN-utils for additional monitoring and CAN frame operations.
-
-
-## Components
-Virtual ECUs
-This project simulates the following ECUs:
-* Anti-lock Brake System (ABS)
-* Airbag Control Module (ACM)
-* Body Control Module (BCM)
-* Engine Control Module (ECM)
-* Infotainment Control Unit (ICU)
-* Transmission Control Module (TCM)
-* Advanced Driver Assistance Systems (ADAS)
-Each ECU represents key vehicle functions and security requirements, ensuring that the firewall is tailored for realistic and complex automotive scenarios.
-
-## Virtual CAN (vCAN) Network
-Virtual CAN networks (vCAN) are used to simulate data communication between the ECUs. These virtual networks allow real-time monitoring and testing of ECU traffic, enabling effective testing of the firewall rules.
 
 ## Changes from the Original VirtualECU
 * Custom configurations and YAML files for specific ECU interactions and firewall rules.
