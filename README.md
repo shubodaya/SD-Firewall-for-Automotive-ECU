@@ -16,12 +16,12 @@ This project extends the original [VirtualECU](https://github.com/pschichtel/Vir
     <td>
       <h3>Scenario 1</h3>
       <p>Central Gateway ECU with four vCAN Interface and Firewall Protection</p>
-      <img src="https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/blob/13debdd61451b6401399f9324e3ea1df34fdd204/Scenario1.png" alt="Central Gateway ECU with four vCAN Interface" width="400" />
+      <img src="https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/blob/13debdd61451b6401399f9324e3ea1df34fdd204/Scenario1.png" alt="Central Gateway ECU with four vCAN Interface" width="350" />
     </td>
     <td>
       <h3>Scenario 2</h3>
       <p>Central Gateway ECU with eight vCAN Interface and Firewall Protection</p>
-      <img src="https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/blob/fa710958de019483b20ab68d3c38bd907d3e4ece/Scenario2.png" alt="Central Gateway ECU with eight vCAN Interface" width="400" />
+      <img src="https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/blob/fa710958de019483b20ab68d3c38bd907d3e4ece/Scenario2.png" alt="Central Gateway ECU with eight vCAN Interface" width="350" />
     </td>
   </tr>
 </table>
