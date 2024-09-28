@@ -1,0 +1,264 @@
+controllers:
+  "7E2":
+    name: ABS
+    services:
+      "01":
+        name: Live Data
+        action:
+          generator: "constant(1.0) andThen unsignedInteger(1)"
+        parameters:
+          "0A":
+            name: Wheel Speed Front Left
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0B":
+            name: Wheel Speed Front Right
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0C":
+            name: Wheel Speed Rear Left
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0D":
+            name: Wheel Speed Rear Right
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "2F":
+            name: Brake Pressure
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "5A":
+            name: ABS Activation Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "09":
+        name: Metadata
+        parameters:
+          "02":
+            name: Vehicle ID - ABCD1234
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0A":
+            name: ECU Name - Anti-lock Braking System Module
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+# Define expected received ACM message IDs
+  "7D4":
+    name: Airbag Control Module
+    services:
+      "04":
+        name: Live Data
+        action:
+          generator: "constant(1.0) andThen unsignedInteger(1)"
+        parameters:
+          "01":
+            name: Front Airbag Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "02":
+            name: Side Airbag Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "03":
+            name: Curtain Airbag Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "04":
+            name: Airbag Deployment Count
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "05":
+            name: Seatbelt Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "05":
+        name: Metadata
+        parameters:
+          "02":
+            name: Vehicle ID - ABCD5678
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0A":
+            name: ECU Name - Airbag Control Module
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+# Define expected received ECM message IDs
+  "7E0":
+    name: Engine
+    services:
+      "01":
+        name: Live Data
+        action:
+          generator: "constant(1.0) andThen unsignedInteger(1)"
+        parameters:
+          "05":
+            name: Coolant Temperature
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0C":
+            name: Engine RPM
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0D":
+            name: Vehicle Speed
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "11":
+            name: Throttle Position
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "2F":
+            name: Fuel Tank Level
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "15":
+            name: Fuel Pressure
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "3D":
+            name: Oil Pressure
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "09":
+        name: Metadata
+        parameters:
+          "02":
+            name: Vehicle ID - ABCD1234
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0A":
+            name: ECU Name - Engine Controller Unit
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+# Define expected received TCM message IDs
+  "7E1":
+    name: Transmission Control Module
+    services:
+      "01":
+        name: Live Data
+        action:
+          generator: "constant(1.0) andThen unsignedInteger(1)"
+        parameters:
+          "0A":
+            name: Gear Position
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0B":
+            name: Transmission Fluid Temperature
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0C":
+            name: Torque Converter Lock-up
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0D":
+            name: Transmission Oil Pressure
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0E":
+            name: Transmission Mode
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "09":
+        name: Metadata
+        parameters:
+          "02":
+            name: Vehicle ID - ABCD1234
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0A":
+            name: ECU Name - Transmission Control Module
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+# Define expected received ADAS message IDs
+  "7E4":
+    name: ADAS
+    services:
+      "01":
+        name: Forward Collision Warning
+        parameters:
+          "10":
+            name: Collision Warning Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "11":
+            name: Collision Distance
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "02":
+        name: Lane Departure Warning
+        parameters:
+          "20":
+            name: Lane Departure Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "21":
+            name: Lane Position
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "03":
+        name: Adaptive Cruise Control
+        parameters:
+          "30":
+            name: Cruise Control Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "31":
+            name: Set Speed
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "04":
+        name: Parking Assistance
+        parameters:
+          "40":
+            name: Parking Sensor Status
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "41":
+            name: Object Distance
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "05":
+        name: Traffic Sign Recognition
+        parameters:
+          "50":
+            name: Traffic Sign Detected
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "51":
+            name: Sign Type
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+      "06":
+        name: System Diagnostics
+        parameters:
+          "60":
+            name: Battery Voltage
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "61":
+            name: CPU Temperature
+            action:
+              generator: "constant(70.0) andThen unsignedInteger(1)"
+          "62":
+            name: System Uptime
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "63":
+            name: Error Code
+            action:
+              generator: "constant(0.0) andThen unsignedInteger(1)"
+      "09":
+        name: Metadata
+        parameters:
+          "02":
+            name: Vehicle ID - ABCD1234
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+          "0B":
+            name: ECU Name - Advanced Driver Assistance System
+            action:
+              generator: "constant(1.0) andThen unsignedInteger(1)"
+
+
+
