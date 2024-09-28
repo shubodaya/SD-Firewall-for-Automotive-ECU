@@ -12,7 +12,7 @@ This project extends the original [VirtualECU](https://github.com/pschichtel/Vir
 - Attack Simulations: Test the firewall under various cybersecurity threat scenarios to ensure robustness and resilience.
 
 ### Scenario 1
-![Central Gateway ECU with four vCAN Interface and Firewall Protection](https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/Scenario1.png)
+![Central Gateway ECU with four vCAN Interface and Firewall Protection](https://github.com/shubodaya/SD-Firewall-for-Automotive-Network/blob/13debdd61451b6401399f9324e3ea1df34fdd204/Scenario1.png) 
 
 
 ### Scenario 2
