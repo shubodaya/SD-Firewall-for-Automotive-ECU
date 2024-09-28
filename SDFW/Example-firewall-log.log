@@ -1,0 +1,57 @@
+2024-09-28 16:23:57,137 - Created a socket
+2024-09-28 16:23:57,144 - Created a socket
+2024-09-28 16:23:57,144 - Created a socket
+2024-09-28 16:23:57,144 - Created a socket
+2024-09-28 16:23:57,145 - Created a socket
+2024-09-28 16:23:57,145 - Created a socket
+2024-09-28 16:23:57,152 - Created a socket
+2024-09-28 16:23:57,153 - Created a socket
+2024-09-28 16:24:29,188 - Processing message from ABS on vcan0
+2024-09-28 16:24:29,191 - Forwarding message from ABS to ECM on vcan1: ABS needs engine data from ECM for braking control.
+2024-09-28 16:24:29,194 - Forwarding message from ABS to TCM on vcan2: ABS needs transmission data from TCM.
+2024-09-28 16:24:29,194 - Forwarding message from ABS to ACM on vcan3: ABS needs to communicate with ACM for safety.
+2024-09-28 16:24:29,194 - Blocking message from ABS to BCM on vcan4: ABS do not need to interact with BCM.
+2024-09-28 16:24:29,194 - Blocking message from ABS to ICU on vcan5: ABS do not need infotainment data.
+2024-09-28 16:24:29,194 - Forwarding message from ABS to ADAS on vcan6: ABS provides critical data to ADAS for advanced driving features.
+2024-09-28 16:26:08,507 - Processing message from ECM on vcan1
+2024-09-28 16:26:08,512 - Forwarding message from ECM to ABS on vcan0: ECM needs to communicate with ABS for braking control.
+2024-09-28 16:26:08,520 - Forwarding message from ECM to TCM on vcan2: ECM needs to communicate with TCM for transmission control.
+2024-09-28 16:26:08,524 - Forwarding message from ECM to ACM on vcan3: ECM needs to provide data to ACM for safety systems.
+2024-09-28 16:26:08,525 - Blocking message from ECM to BCM on vcan4: ECM does not need to interact with BCM.
+2024-09-28 16:26:08,527 - Blocking message from ECM to ICU on vcan5: ECM does not need to interact with ICU.
+2024-09-28 16:26:08,529 - Forwarding message from ECM to ADAS on vcan6: ECM provides engine data necessary for ADAS functionality.
+2024-09-28 16:26:59,584 - Processing message from TCM on vcan2
+2024-09-28 16:26:59,588 - Forwarding message from TCM to ABS on vcan0: TCM communicates with ABS for transmission and braking coordination.
+2024-09-28 16:26:59,588 - Forwarding message from TCM to ECM on vcan1: TCM communicates with ECM for transmission and engine coordination.
+2024-09-28 16:26:59,591 - Forwarding message from TCM to ACM on vcan3: TCM may provide data to ACM for enhanced safety features.
+2024-09-28 16:26:59,595 - Blocking message from TCM to BCM on vcan4: TCM does not need to interact with BCM.
+2024-09-28 16:26:59,596 - Blocking message from TCM to ICU on vcan5: TCM does not need to interact with ICU.
+2024-09-28 16:26:59,598 - Forwarding message from TCM to ADAS on vcan6: TCM provides vehicle control data to ADAS for stability and performance.
+2024-09-28 16:27:43,023 - Processing message from ACM on vcan3
+2024-09-28 16:27:43,027 - Forwarding message from ACM to ABS on vcan0: ACM needs to receive data from ABS for airbag deployment.
+2024-09-28 16:27:43,029 - Forwarding message from ACM to ECM on vcan1: ACM requires ECM data for comprehensive safety systems.
+2024-09-28 16:27:43,029 - Forwarding message from ACM to TCM on vcan2: ACM may need TCM data for certain safety features.
+2024-09-28 16:27:43,029 - Forwarding message from ACM to BCM on vcan4: ACM communicates with BCM for various body functions.
+2024-09-28 16:27:43,030 - Forwarding message from ACM to ICU on vcan5: ACM can send status updates to the infotainment system.
+2024-09-28 16:27:43,033 - Forwarding message from ACM to ADAS on vcan6: ACM might send data to ADAS for integrated safety systems.
+2024-09-28 16:28:32,240 - Processing message from BCM on vcan4
+2024-09-28 16:28:32,243 - Blocking message from BCM to ABS on vcan0: BCM does not need to interact with ABS.
+2024-09-28 16:28:32,245 - Blocking message from BCM to ECM on vcan1: BCM does not need to interact with ECM.
+2024-09-28 16:28:32,246 - Blocking message from BCM to TCM on vcan2: BCM does not need to interact with TCM.
+2024-09-28 16:28:32,248 - Forwarding message from BCM to ACM on vcan3: BCM needs to interact with ACM for body functions.
+2024-09-28 16:28:32,250 - Blocking message from BCM to ICU on vcan5: BCM does not need to interact with ICU.
+2024-09-28 16:28:32,250 - Blocking message from BCM to ADAS on vcan6: BCM does not interact directly with ADAS.
+2024-09-28 16:30:22,363 - Processing message from ICU on vcan5
+2024-09-28 16:30:22,366 - Blocking message from ICU to ABS on vcan0: ICU does not need to interact with ABS.
+2024-09-28 16:30:22,370 - Blocking message from ICU to ECM on vcan1: ICU does not need to interact with ECM.
+2024-09-28 16:30:22,372 - Blocking message from ICU to TCM on vcan2: ICU does not need to interact with TCM.
+2024-09-28 16:30:22,373 - Forwarding message from ICU to ACM on vcan3: ICU can send information to ACM for display or alerts.
+2024-09-28 16:30:22,375 - Blocking message from ICU to BCM on vcan4: ICU does not need to interact with BCM.
+2024-09-28 16:30:22,376 - Forwarding message from ICU to ADAS on vcan6: ICU receives data from ADAS to display driver assistance information.
+2024-09-28 16:31:47,474 - Processing message from ADAS on vcan6
+2024-09-28 16:31:47,479 - Forwarding message from ADAS to ABS on vcan0: ADAS needs ABS data for safety features like collision avoidance.
+2024-09-28 16:31:47,484 - Forwarding message from ADAS to ECM on vcan1: ADAS requires engine data from ECM for advanced driving assistance.
+2024-09-28 16:31:47,488 - Forwarding message from ADAS to TCM on vcan2: ADAS needs TCM data for vehicle control and stability.
+2024-09-28 16:31:47,490 - Blocking message from ADAS to ACM on vcan3: ADAS does not need to interact with ACM.
+2024-09-28 16:31:47,491 - Blocking message from ADAS to BCM on vcan4: ADAS does not directly interact with BCM.
+2024-09-28 16:31:47,493 - Forwarding message from ADAS to ICU on vcan5: ADAS may send data to ICU for displaying driver assistance information.
