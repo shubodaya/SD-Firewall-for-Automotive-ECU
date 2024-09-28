@@ -106,7 +106,7 @@ sbt clean
 sbt update
 sbt compile
 ```
-### Scenario 1
+* Scenario 1
 ```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 acm.yaml"
@@ -116,7 +116,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan0 ecm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 tcm.yaml"
 ```
-### Scenario 2
+* Scenario 2
 ```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 ecm.yaml"
