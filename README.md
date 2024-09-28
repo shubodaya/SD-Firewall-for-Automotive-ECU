@@ -172,7 +172,8 @@ cansend vcan6 7E4#02011000
 ```
 
 ## Usage
-* Customize the firewall rules in the firewall_dict.py file to meet your specific requirements.
+* To test with different scenarios, connect multiple ECUs to their respective vCANs and ensure that they are configured correctly in the environment. This allows for comprehensive testing of the firewall's effectiveness across various use cases.
+* Customize the firewall rules and interface configurations in the main.py and firewall_dict.py files to meet your specific requirements.
 * Simulate traffic between the virtual ECUs and monitor the log files for communication details and firewall performance.
 * Use CAN-utils for additional monitoring and CAN frame operations.
 
