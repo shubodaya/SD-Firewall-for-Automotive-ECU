@@ -83,9 +83,13 @@ sudo apt install git -y
 git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
 cd SD-Firewall-for-Automotive-Network
 cd Scenario1-Shared-vCAN
-# or second scenario
+```
+For the second scenario
+```
 cd Scenario2-Dedicated-vCAN
 ```
+> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 in separate sessions to avoid conflicts between shared and dedicated vCAN interfaces.
+
 2. Install the required packages:
 ```
 sudo apt update && sudo apt upgrade -y
@@ -146,6 +150,8 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan4 bcm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan5 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan6 adas.yaml"
 ```
+> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 in separate sessions to avoid conflicts between shared and dedicated vCAN interfaces.
+
 9. Run the firewall script:
 Again, open a separate terminal tab to run the firewall:
 ```
