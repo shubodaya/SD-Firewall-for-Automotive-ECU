@@ -50,10 +50,11 @@ Event logs from vCAN networks are collected and analyzed to assess the firewall'
 
 ## Installation
 Prerequisites
-* Linux-based environment
-* Python 3.x
+* Linux-based environment with at least 8 GB RAM for optimal performance. If you have limited RAM, you can check with 2-3 ECUs instead of all seven.
+* Python 3.12.3
 * Scala and SBT for virtual ECU simulation
 * SocketCAN and CAN-utils for CAN communication
+
 
 ## Setup Instructions
 1. Install Git if not already installed and clone repository.
@@ -106,7 +107,8 @@ sbt clean
 sbt update
 sbt compile
 ```
-* Scenario 1
+* Scenario 1:
+Open separate terminal tabs for each ECU and run the following commands:
 ```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 acm.yaml"
@@ -117,6 +119,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan1 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 tcm.yaml"
 ```
 * Scenario 2
+Again, open separate terminal tabs for each ECU and run the following commands:
 ```
 sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan1 ecm.yaml"
@@ -127,6 +130,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan5 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan6 adas.yaml"
 ```
 9. Run the firewall script:
+Again, open a separate terminal tab to run the firewall:
 ```
 python3 -m venv myenv
 source myenv/bin/activate
