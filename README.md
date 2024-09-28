@@ -67,7 +67,8 @@ Virtual CAN networks (vCAN) are used to simulate data communication between the 
 
 ## Installation
 Prerequisites
-* Linux-based environment with at least 8 GB RAM for optimal performance. If you have limited RAM, you can check with 2-3 ECUs instead of all seven.
+* Linux-based environment with at least 8 GB RAM for optimal performance.
+> 💡 **Tip:** If you have limited RAM, you can check with 2-3 ECUs instead of all seven.
 * Python 3.12.3
 * Scala and SBT for virtual ECU simulation
 * SocketCAN and CAN-utils for CAN communication
@@ -150,7 +151,7 @@ sudo sbt "runMain tel.schich.virtualecu.Main vcan4 bcm.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan5 icu.yaml"
 sudo sbt "runMain tel.schich.virtualecu.Main vcan6 adas.yaml"
 ```
-> **Note:** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
+> **_Note:_** You can test one scenario at a time. Make sure to run either Scenario 1 or Scenario 2 to avoid conflicts between shared and dedicated vCAN interfaces.
 
 9. Run the firewall script:
 Again, open a separate terminal tab to run the firewall:
