@@ -185,7 +185,7 @@ This analysis ensures that the firewall functions as intended and strengthens th
 
 ## Usage
 * To test with different scenarios, connect multiple ECUs to their respective vCANs and ensure that they are configured correctly in the environment. This allows for comprehensive testing of the firewall's effectiveness across various use cases.
-* Customize the firewall rules and interface configurations in the "main.py" and "firewall_dict.py" files to meet your specific requirements, and monitor the logs to evaluate the firewall's functionality.
+* Customize the firewall rules and interface configurations in the "main.py" and "firewall_dict.py" files to meet your specific requirements.
 * Simulate traffic between the virtual ECUs and monitor the log files for communication details and firewall performance.
 * Use CAN-utils for additional monitoring and CAN frame operations.
 
