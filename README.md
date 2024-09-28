@@ -43,7 +43,7 @@ Prerequisites
 ## Setup Instructions
 1. Clone the repository:
 
-bash git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
+``git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
 cd automotive-sdf-firewall
 
 2. Install the required Python packages:
