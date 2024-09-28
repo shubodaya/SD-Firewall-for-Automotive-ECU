@@ -41,26 +41,80 @@ Prerequisites
 * SocketCAN and CAN-utils for CAN communication
 
 ## Setup Instructions
-1. Clone the repository:
+1. Install Git if not already installed and clone repository.
+```
+sudo apt install git -y
+```
+2. Clone the repository:
+```
+git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
+cd SD-Firewall-for-Automotive-Network
+cd 
+```
+2. Install the required packages:
+```
+sudo apt update && sudo apt upgrade -y
+sudo apt install openjdk-17-jdk
+sudo apt install scala -y
+sudo apt-get install sbt
+sudo apt install can-utils
+sudo apt-get install linux-modules-extra-$(uname -r)
+sudo apt-get update
+```
+4. Set up Scala and SBT for virtual ECU simulation.
+```
+# Install sbt (Scala build tool) from https://www.scala-sbt.org/download/
+echo "deb https://repo.scala-sbt.org/scalasbt/debian all main" | sudo tee /etc/apt/sources.list.d/sbt.list
+echo "deb https://repo.scala-sbt.org/scalasbt/debian /" | sudo tee /etc/apt/sources.list.d/sbt_old.list
+curl -sL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | sudo apt-key add
+or
+curl -fsSL "https://keyserver.ubuntu.com/pks/lookup?op=get&search=0x2EE0EA64E40A89B84B2DF73499E82A75642AC823" | gpg --dearmor -o /etc/apt/trusted.gpg.d/sbt.gpg
+```
 
-```git clone https://github.com/shubodaya/SD-Firewall-for-Automotive-Network.git
-cd automotive-sdf-firewall
-
-2. Install the required Python packages:
-bash
-pip3 install -r requirements.txt
-
-3. Set up Scala and SBT for virtual ECU simulation.
-
-4. Configure and launch SocketCAN and vCAN interfaces for network communication.
-
-5. Run the firewall script:
-bash
-python3 firewall.py
-
+6. Configure and launch SocketCAN and vCAN interfaces for network communication.
+```
+sudo modprobe vcan
+sudo ip link add dev vcan0 type vcan | sudo ip link set up vcan0
+sudo ip link add dev vcan1 type vcan | sudo ip link set up vcan1
+sudo ip link add dev vcan2 type vcan | sudo ip link set up vcan2
+sudo ip link add dev vcan3 type vcan | sudo ip link set up vcan3
+sudo ip link add dev vcan4 type vcan | sudo ip link set up vcan4
+sudo ip link add dev vcan5 type vcan | sudo ip link set up vcan5
+sudo ip link add dev vcan6 type vcan | sudo ip link set up vcan6
+sudo ip link add dev vcan7 type vcan | sudo ip link set up vcan7
+```
+8. Run SBT
+```
+sbt clean
+sbt update
+sbt compile
+sudo sbt "runMain tel.schich.virtualecu.Main vcan0 abs.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan1 ecm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan2 tcm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan3 acm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan4 bcm.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan5 icu.yaml"
+sudo sbt "runMain tel.schich.virtualecu.Main vcan6 adas.yaml"
+```
+9. Run the firewall script:
+```
+python3 -m venv myenv
+source myenv/bin/activate
+python3 main.py
+```
+10. Send CAN messages to interfaces
+```
+cansend vcan0 7E2#02010A00 
+cansend vcan1 7E0#02010500
+cansend vcan2 7E1#02010A00
+cansend vcan3 7D4#02040100
+cansend vcan4 7C2#02060100
+cansend vcan5 7B8#02010500 
+cansend vcan6 7E4#02011000
+```
 
 ## Usage
-* Customize the firewall rules in the firewall.py file to meet your specific requirements.
+* Customize the firewall rules in the firewall_dict.py file to meet your specific requirements.
 * Simulate traffic between the virtual ECUs and monitor the log files for communication details and firewall performance.
 * Use CAN-utils for additional monitoring and CAN frame operations.
 
